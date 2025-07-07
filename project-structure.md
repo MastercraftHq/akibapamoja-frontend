@@ -6,7 +6,7 @@
 This document explains the structure of the Akiba Pamoja React project. It is designed for clarity, scalability, and team collaboration.
 
 ```
-
+```
 src/
 ├── App.jsx                # Root component for the app
 ├── main.jsx               # Entry point rendered by Vite
@@ -31,6 +31,7 @@ src/
 ├── hooks/                 # Custom React hooks (e.g., useAuth, useFetch)
 │
 └── .env                   # Environment variables (not committed to Git)
+```
 
 ````
 
