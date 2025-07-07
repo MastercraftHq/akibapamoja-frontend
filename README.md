@@ -2,5 +2,8 @@
 
 # Akiba-Pamoja
 
-!Important
-all work to be done under feature branch eg "feature/navbar" under dev branch
+# Akiba Pamoja
+
+This is the frontend repository for the Akiba Pamoja Chama (Group Savings) web application.
+
+The project is still in early development. More details, features, and setup instructions will be added soon.
