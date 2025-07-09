@@ -2,6 +2,12 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+
+This is the frontend repository for the Akiba Pamoja Chama (Group Savings) web application.
+
+The project is still in early development. More details, features, and setup instructions will be added soon.
+- Look at dev branch for more information
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
@@ -67,3 +73,4 @@ export default tseslint.config([
   },
 ])
 ```
+init/create-react-vite-ts
