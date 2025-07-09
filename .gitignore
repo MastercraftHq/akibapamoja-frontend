@@ -23,5 +23,15 @@ dist-ssr
 *.sln
 *.sw?
 
-# api keys
-.env
+# Environment variables
+.env*
+!.env.example
+
+#Build files
+*.firebase
+*tsconfig.node.tsbuildinfo
+*tsconfig.tsbuildinfo
+*vite.config.d.ts
+*vite.config.js
+
+
