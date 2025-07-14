@@ -1,3 +1,17 @@
+/** @format */
+
+// import React from 'react'
+
+// const LoginLayout = () => {
+//   return (
+//     <div className='text-bold'>LoginLayout</div>
+//   )
+// }
+
+// export default LoginLayout;
+
+// import React from 'react';
+import { Outlet } from "react-router-dom";
 import React, { useState } from 'react';
 
 
@@ -8,6 +22,11 @@ const LoginLayout = () => {
  
 
   return (
+    <div className="text-bold">
+      <Outlet />
+    </div>
+  );
+};
     <div className="flex flex-col items-center pt-24 min-h-screen bg-gray-100 p-4">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold text-black mb-2">Welcome back</h1>
