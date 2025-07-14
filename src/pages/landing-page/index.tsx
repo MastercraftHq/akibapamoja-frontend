@@ -16,7 +16,7 @@ const HomePage = () => {
       <div className="flex gap-4">
         <Buttons to="/auth/login" label="Login" variant="primary" />
         <Buttons to="/auth/register" label="Register" variant="secondary" />
-        <Buttons to="/auth/dashboard" label="H" variant="primary" />
+        <Buttons to="dashboard" label="H" variant="primary" />
       </div>
     </div>
   );
