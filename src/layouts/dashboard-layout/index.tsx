@@ -3,11 +3,7 @@
 import { Outlet } from "react-router-dom";
 
 const DashboardLayout = () => {
-  return (
-    <div className="text-bold">
-      <Outlet />
-    </div>
-  );
+  return <Outlet />;
 };
 
 export default DashboardLayout;

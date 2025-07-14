@@ -1,12 +1,10 @@
 /** @format */
 import { Outlet } from "react-router-dom";
+import footer from "./footer";
 
 const LoginLayout = () => {
-  return (
-    <div className="text-bold">
-      <Outlet />
-    </div>
-  );
+  return <Outlet />;
+  footer;
 };
 
 export default LoginLayout;

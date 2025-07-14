@@ -1,6 +1,7 @@
 /** @format */
 
 // import React from 'react'
+// import { Outlet } from "react-router-dom";
 import { useState } from "react";
 
 const LoginPage = () => {
@@ -51,11 +52,14 @@ const LoginPage = () => {
           <div className="text-right mb-8">
             <a
               href="/forgot-password"
+
               className="text-primary text-md hover:text-primary transition-colors"
+
             >
               Forgot password?
             </a>
           </div>
+
 
           <button className="w-full bg-primary text-white py-4 rounded-lg font-semibold text-base ">
             Continue
@@ -69,6 +73,7 @@ const LoginPage = () => {
               Sign up for free
             </a>
           </p>
+
         </div>
       </div>
     </div>

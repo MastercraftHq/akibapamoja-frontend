@@ -1,6 +1,6 @@
 /** @format */
 
-import { Link } from "react-router-dom";
+import Buttons from "../../components/Buttons";
 
 const HomePage = () => {
   return (
@@ -14,24 +14,9 @@ const HomePage = () => {
       </p>
 
       <div className="flex gap-4">
-        <Link
-          to="/auth/login"
-          className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition cursor-pointer"
-        >
-          Login
-        </Link>
-        <Link
-          to="/auth/register"
-          className="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300 transition cursor-pointer"
-        >
-          Register
-        </Link>
-        <Link
-          to="/dashboard"
-          className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition cursor-pointer"
-        >
-          H
-        </Link>
+        <Buttons to="/auth/login" label="Login" variant="primary" />
+        <Buttons to="/auth/register" label="Register" variant="secondary" />
+        <Buttons to="dashboard" label="H" variant="primary" />
       </div>
     </div>
   );
