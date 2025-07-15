@@ -1,9 +1,14 @@
-import React from 'react'
+/** @format */
+
+// import React from 'react'
+import { Outlet } from "react-router-dom";
 
 const LandingLayout = () => {
   return (
-    <div>LandingLayout</div>
-  )
-}
+    <div>
+      <Outlet />
+    </div>
+  );
+};
 
-export default LandingLayout
+export default LandingLayout;
