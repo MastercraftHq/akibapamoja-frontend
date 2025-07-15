@@ -33,15 +33,12 @@ const Router = () => {
 
     //Registration Flow
     {
-      path: "auth",
+      path: "auth/register",
       element: <RegistrationLayout />,
       children: [
         {
-          index: false,
-          element: <Navigate to="/auth/register" replace />,
-        },
-        {
-          path: "register",
+          index: true,
+          //   path: "register",
           element: <RegistrationPage />,
         },
       ],
