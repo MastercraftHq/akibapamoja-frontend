@@ -12,11 +12,13 @@
 
 // import React from 'react';
 import { Outlet } from "react-router-dom";
+import Regfooter from "./footer";
 
 const RegistrationLayout = () => {
   return (
     <div>
       <Outlet />
+      <Regfooter />
     </div>
   );
 };
