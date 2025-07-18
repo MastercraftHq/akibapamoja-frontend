@@ -11,6 +11,7 @@ import LandingLayout from "./layouts/landing-layout";
 import HomePage from "./pages/landing-page";
 import DashboardLayout from "./layouts/dashboard-layout";
 import Dashboard from "./pages/dashboard";
+import SetProfile from "./pages/setprofile";
 
 const Router = () => {
   const routes = useRoutes([
@@ -61,7 +62,7 @@ const Router = () => {
       path: "*",
       element: <NotFoundPage />,
     },
-    //Homepage
+    //dashboard landing
     {
       path: "/",
       element: <DashboardLayout />,
@@ -75,6 +76,10 @@ const Router = () => {
           element: <Dashboard />,
         },
       ],
+    },
+    {
+      path: "setprofile",
+      element: <SetProfile />,
     },
   ]);
 
