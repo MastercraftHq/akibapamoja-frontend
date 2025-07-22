@@ -11,6 +11,8 @@ import LandingLayout from "./layouts/landing-layout";
 import HomePage from "./pages/landing-page";
 import DashboardLayout from "./layouts/dashboard-layout";
 import Dashboard from "./pages/dashboard";
+import ConfirmCodePage from "./pages/auth/confirm-code-page";
+import DisplayNamePage from "./pages/auth/display-name-page";
 
 const Router = () => {
   const routes = useRoutes([
@@ -41,6 +43,14 @@ const Router = () => {
           //   path: "register",
           element: <RegistrationPage />,
         },
+        {
+          path: "confirm",
+          element: <ConfirmCodePage />,
+        },
+         {
+          path: "display-name",
+          element: <DisplayNamePage />,
+        }
       ],
     },
 
