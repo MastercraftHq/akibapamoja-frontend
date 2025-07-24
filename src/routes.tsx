@@ -74,7 +74,7 @@ const Router = () => {
       path: "*",
       element: <NotFoundPage />,
     },
-    //Homepage
+    //dashboard landing
     {
       path: "/",
       element: <DashboardLayout />,
@@ -88,6 +88,10 @@ const Router = () => {
           element: <Dashboard />,
         },
       ],
+    },
+    {
+      path: "setprofile",
+      element: <SetProfile />,
     },
   ]);
 
