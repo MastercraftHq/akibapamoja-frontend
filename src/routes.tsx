@@ -14,6 +14,8 @@ import Dashboard from "./pages/dashboard";
 import SetProfile from "./pages/setprofile";
 import SetPasswordLayout from "./layouts/password-layout";
 import SetPasswordPage from "./pages/auth/password-page";
+import ConfirmCodePage from "./pages/auth/confirm-code-page";
+import DisplayNamePage from "./pages/auth/display-name-page";
 
 const Router = () => {
   const routes = useRoutes([
@@ -44,6 +46,14 @@ const Router = () => {
           //   path: "register",
           element: <RegistrationPage />,
         },
+        {
+          path: "confirm",
+          element: <ConfirmCodePage />,
+        },
+         {
+          path: "display-name",
+          element: <DisplayNamePage />,
+        }
       ],
     },
 
