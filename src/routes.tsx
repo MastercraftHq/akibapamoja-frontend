@@ -11,6 +11,8 @@ import LandingLayout from "./layouts/landing-layout";
 import HomePage from "./pages/landing-page";
 import DashboardLayout from "./layouts/dashboard-layout";
 import Dashboard from "./pages/dashboard";
+import SetPasswordLayout from "./layouts/password-layout";
+import SetPasswordPage from "./pages/auth/password-page";
 
 const Router = () => {
   const routes = useRoutes([
@@ -52,6 +54,17 @@ const Router = () => {
         {
           index: true,
           element: <HomePage />,
+        },
+      ],
+    },
+    //Set Password Page
+    {
+      path: "auth/set-password",
+      element: <SetPasswordLayout />,
+      children: [
+        {
+          index: true,
+          element: <SetPasswordPage />,
         },
       ],
     },

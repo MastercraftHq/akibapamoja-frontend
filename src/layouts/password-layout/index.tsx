@@ -1,15 +1,15 @@
 /** @format */
 import { Outlet } from "react-router-dom";
-import Footer from "./Footer";
 
 
-const LoginLayout = () => {
+
+const SetPasswordLayout = () => {
   return (
     <>
       <Outlet />
-      <Footer />
+     
     </>
   );
 };
 
-export default LoginLayout;
+export default SetPasswordLayout;
