@@ -16,6 +16,7 @@ import SetPasswordLayout from "./layouts/password-layout";
 import SetPasswordPage from "./pages/auth/password-page";
 import ConfirmCodePage from "./pages/auth/confirm-code-page";
 import DisplayNamePage from "./pages/auth/display-name-page";
+import SignUpPage from "./pages/auth/sign-up";
 
 const Router = () => {
   const routes = useRoutes([
@@ -53,6 +54,10 @@ const Router = () => {
          {
           path: "display-name",
           element: <DisplayNamePage />,
+        },
+        {
+          path: "sign-up",
+          element: <SignUpPage />,
         }
       ],
     },
