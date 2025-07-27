@@ -3,7 +3,12 @@
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 
-This is the frontend repository for the Akiba Pamoja Chama (Group Savings) web application.
+## Setup Instructions
+1. Clone the repository. `https://github.com/MastercraftHq/akibapamoja-frontend.git`
+2. Navigate to Akiba Pamoja
+3. Run `npm install` to install dependencies.
+4. Create a `.env` file in the root directory (see `.env.example` for required variables). // up for discussion
+5. Run `npm run dev` to start the development server.
 
 The project is still in early development. More details, features, and setup instructions will be added soon.
 - Look at dev branch for more information
