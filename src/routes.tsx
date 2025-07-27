@@ -46,15 +46,18 @@ const Router = () => {
           //   path: "register",
           element: <RegistrationPage />,
         },
+
         {
-          path: "confirm",
-          element: <ConfirmCodePage />,
-        },
-         {
           path: "display-name",
           element: <DisplayNamePage />,
-        }
+        },
       ],
+    },
+
+    //Confirmation Page
+    {
+      path: "confirm",
+      element: <ConfirmCodePage />,
     },
 
     //HomePage

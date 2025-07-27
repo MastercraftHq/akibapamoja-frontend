@@ -1,9 +1,25 @@
+/** @format */
+
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const RegistrationPage = () => {
   return (
-    <div className="min-h-screen font-geist text-[#303030] bg-white flex items-center justify-center px-2 sm:px-4">
-      <div className="w-full max-w-sm mx-auto">
+    <div className="w-full min-h-screen font-geist text-[#303030] bg-white flex flex-col justify-center px-2 sm:px-4 py-3">
+      <div className="flex justify-between w-full">
+        <Button variant="ghost" size="sm" className="mr-4 p-2">
+          <Link to="/">
+            <ArrowLeft size={24} className="text-gray-600" />
+          </Link>
+        </Button>
+        <Button variant="ghost" size="sm" className="mr-4 p-2">
+          <Link to="/confirm">
+            <ArrowRight size={24} className="text-gray-600" />
+          </Link>
+        </Button>
+      </div>
+      <div className="flex flex-col items-center py-5 w-full max-w-sm mx-auto">
         <p className="text-base sm:text-lg w-full block mx-auto pt-8 text-center">
           You are signing up to join the
           <br /> <span className="font-semibold">Akili Dada Chama.</span>

@@ -4,14 +4,26 @@ import { ArrowLeft } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 // import Buttons from "../../components/Buttons";
+
 import { assets } from "@/assets/assets";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const SetProfile = () => {
   return (
     <div className="min-h-screen flex flex-col p-6 relative w-full">
       <div className="flex justify-between w-full mb-8">
-        <ArrowLeft />
-        <span className="text-primary">Skip</span>
+        <Button variant="ghost" size="sm" className="mr-4 p-2">
+          <Link to="/">
+            <ArrowLeft size={24} className="text-gray-600" />
+          </Link>
+        </Button>
+        <Link
+          to="/next-page"
+          className="text-primary hover:opacity-80 transition-opacity"
+        >
+          Skip
+        </Link>
       </div>
       <div className="flex flex-col justify-center items-center gap-6 py-4">
         <h2 className="text-xl font-semibold font-geist mb-3">

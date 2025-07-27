@@ -1,3 +1,5 @@
+/** @format */
+
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -15,21 +17,24 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { Link } from "react-router-dom";
 
 // Zod schema for form validation
-const formSchema = z.object({
-  password: z
-    .string()
-    .min(8, "Password must be at least 8 characters long")
-    .regex(
-      /[!@#$%^&*(),.?":{}|<>]/,
-      "Password must contain at least one special character"
-    ),
-  confirmPassword: z.string(),
-}).refine((data) => data.password === data.confirmPassword, {
-  message: "Passwords do not match",
-  path: ["confirmPassword"],
-});
+const formSchema = z
+  .object({
+    password: z
+      .string()
+      .min(8, "Password must be at least 8 characters long")
+      .regex(
+        /[!@#$%^&*(),.?":{}|<>]/,
+        "Password must contain at least one special character"
+      ),
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
+  });
 
 type FormData = z.infer<typeof formSchema>;
 
@@ -45,7 +50,8 @@ interface PasswordStrength {
 
 const SetPasswordPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState<boolean>(false);
+  const [showConfirmPassword, setShowConfirmPassword] =
+    useState<boolean>(false);
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -69,11 +75,11 @@ const SetPasswordPage: React.FC = () => {
 
   const getPasswordStrength = (pwd: string): PasswordStrength | null => {
     if (!pwd) return null;
-    
+
     const requirements = getPasswordRequirements(pwd);
     const hasLength = requirements.length;
     const hasSpecial = requirements.special;
-    
+
     if (hasLength && hasSpecial) {
       return { level: "Excellent", color: "text-green-600" };
     } else if (hasLength || hasSpecial) {
@@ -94,7 +100,9 @@ const SetPasswordPage: React.FC = () => {
     <div className="min-h-screen bg-white font-geist">
       <div className="flex items-center p-4 ">
         <Button variant="ghost" size="sm" className="mr-4 p-2">
-          <ArrowLeft size={24} className="text-gray-600" />
+          <Link to="/auth/login">
+            <ArrowLeft size={24} className="text-gray-600" />
+          </Link>
         </Button>
       </div>
       <div className="bg-white p-6 sm:p-8 max-w-md mx-auto">
@@ -136,7 +144,7 @@ const SetPasswordPage: React.FC = () => {
                       </Button>
                     </div>
                   </FormControl>
-                  
+
                   {/* Password Strength */}
                   {password && strength && !form.formState.errors.password && (
                     <div className="mt-3">
@@ -147,11 +155,12 @@ const SetPasswordPage: React.FC = () => {
                   )}
 
                   <FormMessage />
-                  
+
                   {/* Requirements */}
                   {!form.formState.errors.password && (
                     <FormDescription className="text-xs text-gray-600 leading-relaxed">
-                      Your password should be at least 8 characters long with one special character like ($,#,!,*,&,@.)
+                      Your password should be at least 8 characters long with
+                      one special character like ($,#,!,*,&,@.)
                     </FormDescription>
                   )}
                 </FormItem>
@@ -179,7 +188,9 @@ const SetPasswordPage: React.FC = () => {
                         type="button"
                         variant="ghost"
                         size="sm"
-                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                        onClick={() =>
+                          setShowConfirmPassword(!showConfirmPassword)
+                        }
                         className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
                       >
                         {showConfirmPassword ? (
@@ -194,14 +205,14 @@ const SetPasswordPage: React.FC = () => {
                   <FormMessage />
 
                   {/* Password Match Indicator */}
-                  {confirmPassword && 
-                   password && 
-                   confirmPassword === password && 
-                   !form.formState.errors.confirmPassword && (
-                    <div className="mt-2 text-sm text-green-600">
-                      Passwords match
-                    </div>
-                  )}
+                  {confirmPassword &&
+                    password &&
+                    confirmPassword === password &&
+                    !form.formState.errors.confirmPassword && (
+                      <div className="mt-2 text-sm text-green-600">
+                        Passwords match
+                      </div>
+                    )}
                 </FormItem>
               )}
             />
@@ -215,11 +226,9 @@ const SetPasswordPage: React.FC = () => {
                 Next
               </Button>
             </div>
-          </form> 
+          </form>
         </Form>
       </div>
-
-      
     </div>
   );
 };
