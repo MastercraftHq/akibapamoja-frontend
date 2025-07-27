@@ -9,7 +9,7 @@ Akiba-Pamoja is a React-based application aimed at...
 - Example branch name: `feature/navbar`.
 
 ## Setup Instructions
-1. Clone the repository. ``
+1. Clone the repository. `https://github.com/MastercraftHq/akibapamoja-frontend.git`
 2. Navigate to Akiba Pamoja
 3. Run `npm install` to install dependencies.
 4. Create a `.env` file in the root directory (see `.env.example` for required variables). // up for discussion
