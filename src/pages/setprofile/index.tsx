@@ -12,12 +12,12 @@ const SetProfile = () => {
     <div className="min-h-screen flex flex-col p-6 relative w-full">
       <div className="flex justify-between w-full mb-8">
         <Button variant="ghost" size="sm" className="mr-4 p-2">
-          <Link to="/">
+          <Link to="/auth/set-password">
             <ArrowLeft size={24} className="text-gray-600" />
           </Link>
         </Button>
         <Link
-          to="/next-page"
+          to="/auth/login"
           className="text-primary hover:opacity-80 transition-opacity"
         >
           Skip
@@ -87,9 +87,9 @@ const SetProfile = () => {
           </div>
         </div>
 
-        <div className="w-full absolute bottom-0 py-2 px-4">
+        <div className="w-1/2 md:w-1/3 absolute bottom-0 py-1 px-4">
           {/* <Buttons to="/auth/login" label="Next" variant="primary" /> */}
-          <button className="w-full bg-primary text-white py-3 sm:py-4 rounded-md font-semibold text-base ">
+          <button className="w-full bg-primary text-white py-3 sm:py-4 rounded-md font-semibold text-base">
             Next
           </button>
         </div>

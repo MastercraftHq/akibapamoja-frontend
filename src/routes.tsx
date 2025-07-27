@@ -16,6 +16,7 @@ import SetPasswordLayout from "./layouts/password-layout";
 import SetPasswordPage from "./pages/auth/password-page";
 import ConfirmCodePage from "./pages/auth/confirm-code-page";
 import DisplayNamePage from "./pages/auth/display-name-page";
+import ModalContact from "./pages/setprofile/modal";
 
 const Router = () => {
   const routes = useRoutes([
@@ -106,6 +107,10 @@ const Router = () => {
     {
       path: "setprofile",
       element: <SetProfile />,
+    },
+    {
+      path: "ModalContact",
+      element: <ModalContact />,
     },
   ]);
 
