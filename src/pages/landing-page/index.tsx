@@ -17,6 +17,11 @@ const HomePage = () => {
         <Buttons to="/auth/login" label="Login" variant="primary" />
         <Buttons to="/auth/register" label="Register" variant="secondary" />
         <Buttons to="dashboard" label="H" variant="primary" />
+        <Buttons
+          to="/create-account"
+          label="Create Account"
+          variant="primary"
+        />
       </div>
     </div>
   );

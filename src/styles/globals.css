@@ -8,6 +8,7 @@
 @theme {
   --font-geist: "Geist", sans-serif;
   --color-primary: #4107a5;
+  --color-charcoal: #222;
   --color-input-gray: rgba(233, 233, 233, 0.44);
   --text-tiny: 0.625rem;
 }
