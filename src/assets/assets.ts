@@ -8,6 +8,7 @@ import avator4 from "./avator4.png";
 import avator5 from "./avator5.png";
 import avator6 from "./avator6.png";
 import akibalogo from "./akibalogo.png";
+import women from "./women.png"
 
 export const assets = {
   profileAvatar,
@@ -18,4 +19,5 @@ export const assets = {
   avator5,
   avator6,
   akibalogo,
+  women,
 };
