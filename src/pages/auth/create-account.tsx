@@ -1,7 +1,8 @@
 /** @format */
 
 import { assets } from "@/assets/assets";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Buttons from "../../components/Buttons";
 
 export default function CreateAccountPage() {
@@ -15,16 +16,40 @@ export default function CreateAccountPage() {
           <h2 className="font-bold text-xl font-geist">Create an account</h2>
           <p>Register your account using either your phonenumber or email</p>
           <div className="flex gap-6 w-full">
-            <Button>Phone</Button>
-            <Button>Email</Button>
+            <Tabs defaultValue="Phone" className="w-[400px]">
+              <TabsList>
+                <TabsTrigger value="Phone">Phone</TabsTrigger>
+                <TabsTrigger value="Email">Email</TabsTrigger>
+              </TabsList>
+              <TabsContent value="Phone">
+                {" "}
+                <input
+                  type="number"
+                  name="phonenumber"
+                  id=""
+                  placeholder="Enter phone number"
+                  className="border p-2 rounded w-full text-sm"
+                />
+              </TabsContent>
+              <TabsContent value="Email">
+                {" "}
+                <input
+                  type="Email"
+                  name="Email"
+                  id=""
+                  placeholder="Enter your email"
+                  className="border p-2 rounded w-full text-sm"
+                />
+              </TabsContent>
+            </Tabs>
           </div>
-          <input
+          {/* <input
             type="number"
             name="phonenumber"
             id=""
             placeholder="Enter phone number"
             className="border p-2 rounded w-full text-sm"
-          />
+          /> */}
           <Buttons to="/auth/login" label="Next" variant="primary" />
           <p>or</p>
           <div className="flex flex-col gap-4">
