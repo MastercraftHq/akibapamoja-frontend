@@ -17,6 +17,8 @@ import SetPasswordPage from "./pages/auth/password-page";
 import ConfirmCodePage from "./pages/auth/confirm-code-page";
 import DisplayNamePage from "./pages/auth/display-name-page";
 import ModalContact from "./pages/setprofile/modal";
+import CreateAccountPage from "./pages/auth/create-account";
+import CreateAccountLayout from "./layouts/CreateAccountLayout";
 
 const Router = () => {
   const routes = useRoutes([
@@ -111,6 +113,24 @@ const Router = () => {
     {
       path: "ModalContact",
       element: <ModalContact />,
+    },
+
+    //create account page
+    // {
+    //   path: "CreateAccountPage",
+    //   element: <CreateAccountPage />,
+    // },
+
+    //create account page with layout
+    {
+      path: "create-account",
+      element: <CreateAccountLayout />, 
+      children: [
+        {
+          index: true,
+          element: <CreateAccountPage />, 
+        },
+      ],
     },
   ]);
 
