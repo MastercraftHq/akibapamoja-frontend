@@ -9,7 +9,7 @@ import LandingLayout from "./layouts/landing-layout";
 import HomePage from "./pages/landing-page";
 import DashboardLayout from "./layouts/dashboard-layout";
 import Dashboard from "./pages/dashboard";
-import SetProfile from "./pages/setprofile";
+import SetProfile from "./pages/auth/set-profile";
 import SetPasswordPage from "./pages/auth/password-page";
 import ConfirmCodePage from "./pages/auth/confirm-code-page";
 import DisplayNamePage from "./pages/auth/display-name-page";
@@ -53,6 +53,7 @@ const Router = () => {
           path: "confirm",
           element: <ConfirmCodePage />,
         },
+       
       ],
     },
 
@@ -77,6 +78,7 @@ const Router = () => {
           index: true,
           element: <SetPasswordPage />,
         },
+        
       ],
     },
 
@@ -101,11 +103,18 @@ const Router = () => {
         },
       ],
     },
-
     {
-      path: "setprofile",
-      element: <SetProfile />,
+      path: "auth/set-profile",
+      element: <AuthLayout />,
+      children: [
+        {
+          index: true,
+          element: <SetProfile />,
+        },
+        
+      ],
     },
+ 
     {
       path: "ModalContact",
       element: <ModalContact />,

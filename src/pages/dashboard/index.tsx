@@ -8,7 +8,7 @@ const Dashboard = () => {
       
       <h2 className="text-2xl"> This is the homepage</h2>
       <div className="flex gap-2">
-        <Buttons to="/setprofile" label="SetProfile" variant="primary" />
+        <Buttons to="auth/set-profile" label="SetProfile" variant="primary" />
         <Buttons
           to="/auth/set-password"
           label="setPassword"
