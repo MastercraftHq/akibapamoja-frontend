@@ -1,27 +1,13 @@
 /** @format */
 
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function DisplayNamePage() {
   return (
-    <div className="min-h-screen font-geist flex flex-col px-2 sm:px-4 gap-6 py-5">
-      <div className="flex justify-between w-full">
-        <Button variant="ghost" size="sm" className="mr-4 p-2">
-          <Link to="/">
-            <ArrowLeft size={24} className="text-gray-600" />
-          </Link>
-        </Button>
-        <Button variant="ghost" size="sm" className="mr-4 p-2">
-          <Link to="/auth/set-password">
-            <ArrowRight size={24} className="text-gray-600" />
-          </Link>
-        </Button>
-      </div>
+    <div className=" font-geist flex flex-col px-2 sm:px-4 gap-6 py-5">
       <div className="flex-1 flex flex-col justify-center items-center">
-        <div className="flex flex-col justify-center items-center max-w-md w-full">
-          <h1 className="text-charcoal text-center text-[28px] leading-normal font-semibold">
+        <div className="flex flex-col justify-center  max-w-md w-full">
+          <h1 className="text-charcoal text-center md:text-left text-[28px] leading-normal font-semibold mb-5.5">
             What’s your name?
           </h1>
           <div className="flex flex-col items-center gap-5.5 w-81">
