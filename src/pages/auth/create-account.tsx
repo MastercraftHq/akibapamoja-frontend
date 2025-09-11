@@ -8,7 +8,7 @@ import Buttons from "../../components/Buttons";
 
 export default function CreateAccountPage() {
   return (
-    <div className="min-h-screen w-full max-w-md p-3">
+    <div className=" w-full max-w-md p-3">
       <div className="flex items-center justify-center ">
         <div className="flex flex-col justify-center border p-3 gap-3">
           <h2 className="font-medium text-xl font-geist">Create an account</h2>
