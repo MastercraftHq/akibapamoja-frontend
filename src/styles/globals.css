@@ -1,14 +1,19 @@
 /** @format */
 
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 @theme {
   --font-geist: "Geist", sans-serif;
+  --font-inter: "Inter", sans-serif;
   --color-primary: #4107a5;
   --color-charcoal: #222;
+  --color-dark-gray: #3b3b3b;
+  --color-gray: #4d4d4d;
+  --color-background-gray: rgba(231, 228, 235, 0.4);
   --color-input-gray: rgba(233, 233, 233, 0.44);
   --text-tiny: 0.625rem;
 }

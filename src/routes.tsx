@@ -5,7 +5,6 @@ import NotFoundPage from "./pages/not-found";
 
 import LoginPage from "./pages/auth/login-page";
 import LoginLayout from "./layouts/login";
-import RegistrationLayout from "./layouts/registration";
 import RegistrationPage from "./pages/auth/registration-page";
 import LandingLayout from "./layouts/landing-layout";
 import HomePage from "./pages/landing-page";
@@ -17,8 +16,12 @@ import SetPasswordPage from "./pages/auth/password-page";
 import ConfirmCodePage from "./pages/auth/confirm-code-page";
 import DisplayNamePage from "./pages/auth/display-name-page";
 import ModalContact from "./pages/setprofile/modal";
+
+import { RegistrationPagesLayout } from "./layouts/RegistrationPagesLayout";
+
 import CreateAccountPage from "./pages/auth/create-account";
 import CreateAccountLayout from "./layouts/CreateAccountLayout";
+
 
 const Router = () => {
   const routes = useRoutes([
@@ -42,7 +45,7 @@ const Router = () => {
     //Registration Flow
     {
       path: "auth/register",
-      element: <RegistrationLayout />,
+      element: <RegistrationPagesLayout />,
       children: [
         {
           index: true,
@@ -54,14 +57,14 @@ const Router = () => {
           path: "display-name",
           element: <DisplayNamePage />,
         },
+        //Confirmation Page
+        {
+          path: "confirm",
+          element: <ConfirmCodePage />,
+        },
       ],
     },
 
-    //Confirmation Page
-    {
-      path: "confirm",
-      element: <ConfirmCodePage />,
-    },
 
     //HomePage
     {
