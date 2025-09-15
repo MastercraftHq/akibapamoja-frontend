@@ -2,10 +2,26 @@
 
 import { Button } from "@/components/ui/button";
 import OneTimePasswordFieldDemo from "@/components/ui/otp-field";
+import { Link } from "react-router-dom";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function ConfirmCodePage() {
   return (
     <div className="w-2/3 flex flex-col items-center mx-auto gap-8">
+      <div className="flex justify-between w-full">
+        {/* dummy navigation buttons */}
+        <Button variant="ghost" size="sm" className="mr-4 p-2">
+          <Link to="/">
+            <ArrowLeft size={24} className="text-gray-600" />
+          </Link>
+        </Button>
+        <Button variant="ghost" size="sm" className="mr-4 p-2">
+          <Link to="/auth/register/display-name">
+            <ArrowRight size={24} className="text-gray-600" />
+          </Link>
+        </Button>
+      </div>
+
       <div className="flex flex-col justify-center items-center gap-1 text-center leading-[normal]">
         <h1 className="text-charcoal  text-[28px] font-semibold">Enter code</h1>
         <p className=" text-[#5A5A5A] text-sm font-normal text-center">

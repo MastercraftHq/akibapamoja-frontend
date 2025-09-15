@@ -11,17 +11,14 @@ import HomePage from "./pages/landing-page";
 import DashboardLayout from "./layouts/dashboard-layout";
 import Dashboard from "./pages/dashboard";
 import SetProfile from "./pages/setprofile";
-import SetPasswordLayout from "./layouts/password-layout";
+// import SetPasswordLayout from "./layouts/password-layout";
 import SetPasswordPage from "./pages/auth/password-page";
 import ConfirmCodePage from "./pages/auth/confirm-code-page";
 import DisplayNamePage from "./pages/auth/display-name-page";
 import ModalContact from "./pages/setprofile/modal";
 
-import { RegistrationPagesLayout } from "./layouts/RegistrationPagesLayout";
-
 import CreateAccountPage from "./pages/auth/create-account";
-import CreateAccountLayout from "./layouts/CreateAccountLayout";
-
+import AuthLayout from "./layouts/AuthLayout";
 
 const Router = () => {
   const routes = useRoutes([
@@ -42,29 +39,25 @@ const Router = () => {
       ],
     },
 
-    //Registration Flow
+    //Registration Flow - CHANGED TO USE AuthLayout
     {
       path: "auth/register",
-      element: <RegistrationPagesLayout />,
+      element: <AuthLayout />,
       children: [
         {
           index: true,
-          //   path: "register",
           element: <RegistrationPage />,
         },
-
         {
           path: "display-name",
           element: <DisplayNamePage />,
         },
-        //Confirmation Page
         {
           path: "confirm",
           element: <ConfirmCodePage />,
         },
       ],
     },
-
 
     //HomePage
     {
@@ -77,10 +70,11 @@ const Router = () => {
         },
       ],
     },
+
     //Set Password Page
     {
       path: "auth/set-password",
-      element: <SetPasswordLayout />,
+      element: <AuthLayout />,
       children: [
         {
           index: true,
@@ -94,6 +88,7 @@ const Router = () => {
       path: "*",
       element: <NotFoundPage />,
     },
+
     //dashboard landing
     {
       path: "/",
@@ -101,7 +96,7 @@ const Router = () => {
       children: [
         {
           index: true,
-          element: <Navigate to="/" replace />,
+          element: <Navigate to="/" />,
         },
         {
           path: "dashboard",
@@ -109,6 +104,7 @@ const Router = () => {
         },
       ],
     },
+
     {
       path: "setprofile",
       element: <SetProfile />,
@@ -118,20 +114,14 @@ const Router = () => {
       element: <ModalContact />,
     },
 
-    //create account page
-    // {
-    //   path: "CreateAccountPage",
-    //   element: <CreateAccountPage />,
-    // },
-
     //create account page with layout
     {
       path: "create-account",
-      element: <CreateAccountLayout />, 
+      element: <AuthLayout />,
       children: [
         {
           index: true,
-          element: <CreateAccountPage />, 
+          element: <CreateAccountPage />,
         },
       ],
     },
