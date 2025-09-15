@@ -18,7 +18,7 @@ const LoginPage = () => {
           </Link>
         </Button>
         <Button variant="ghost" size="sm" className="mr-4 p-2">
-          <Link to="/confirm">
+          <Link to="auth/confirm">
             <ArrowRight size={24} className="text-gray-600" />
           </Link>
         </Button>

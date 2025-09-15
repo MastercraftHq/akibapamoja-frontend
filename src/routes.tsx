@@ -20,8 +20,7 @@ import ModalContact from "./pages/setprofile/modal";
 import { RegistrationPagesLayout } from "./layouts/RegistrationPagesLayout";
 
 import CreateAccountPage from "./pages/auth/create-account";
-import CreateAccountLayout from "./layouts/CreateAccountLayout";
-
+import AuthLayout from "./layouts/AuthLayout";
 
 const Router = () => {
   const routes = useRoutes([
@@ -64,7 +63,6 @@ const Router = () => {
         },
       ],
     },
-
 
     //HomePage
     {
@@ -127,11 +125,11 @@ const Router = () => {
     //create account page with layout
     {
       path: "create-account",
-      element: <CreateAccountLayout />, 
+      element: <AuthLayout />,
       children: [
         {
           index: true,
-          element: <CreateAccountPage />, 
+          element: <CreateAccountPage />,
         },
       ],
     },

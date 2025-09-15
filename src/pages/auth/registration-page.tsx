@@ -14,7 +14,7 @@ const RegistrationPage = () => {
           </Link>
         </Button>
         <Button variant="ghost" size="sm" className="mr-4 p-2">
-          <Link to="/confirm">
+          <Link to="/auth/login">
             <ArrowRight size={24} className="text-gray-600" />
           </Link>
         </Button>

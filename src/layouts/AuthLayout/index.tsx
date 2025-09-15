@@ -12,13 +12,13 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const CreateAccountLayout = () => {
+const AuthLayout = () => {
   return (
     <div className="h-screen flex">
       {/* Left part */}
       <div className="w-1/2 flex flex-col">
         {/* logo container */}
-        <div className="h-20 pl-3 flex items-center">
+        <div className="h-24 pl-5 flex items-center">
           <img src={assets.akibalogo} alt="akiba logo" className="h-full" />
         </div>
 
@@ -28,10 +28,13 @@ const CreateAccountLayout = () => {
         </div>
 
         {/* Footer at bottom */}
-        <footer className="w-full">
-          <div className="flex justify-between p-6 text-sm">
-            <p>© Akiba Pamoja 2025</p>
-            <p className="flex items-center gap-1">
+        <footer className="w-full text-gray-600 font-inter font-light">
+          <div className="flex justify-between p-6 px-15 text-sm font-400 text-inter ">
+            {/* <p>© Akiba Pamoja 2025</p> */}
+            <p className="flex items-center gap-1 font-400 text-inter text-xs">
+              <Mail /> <span>Akiba Pamoja 2025</span>
+            </p>
+            <p className="flex items-center gap-1 font-400 text-inter text-gray-600 text-xs">
               <Mail /> <span>info@spaceyatech.com</span>
             </p>
           </div>
@@ -124,4 +127,4 @@ const CreateAccountLayout = () => {
   );
 };
 
-export default CreateAccountLayout;
+export default AuthLayout;
