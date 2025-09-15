@@ -1,6 +1,4 @@
 /** @format */
-
-// import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { assets } from "@/assets/assets";
 import { Button } from "@/components/ui/button";
@@ -13,6 +11,7 @@ export default function CreateAccountPage() {
       <div className="flex items-center justify-center ">
         <div className="flex flex-col justify-center p-3 gap-5 w-1/2">
           <div className="flex justify-between w-full">
+            {/* dummy navigation buttons */}
             <Button variant="ghost" size="sm" className="mr-4 p-2">
               <Link to="/">
                 <ArrowLeft size={24} className="text-gray-600" />
@@ -24,6 +23,7 @@ export default function CreateAccountPage() {
               </Link>
             </Button>
           </div>
+
           <div className="flex flex-col gap-5 mb-2">
             <h2 className="font-600 font-semibold leading-[38px] text-2xl font-geist">
               Create an account

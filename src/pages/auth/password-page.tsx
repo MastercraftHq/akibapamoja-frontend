@@ -4,10 +4,10 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Eye, EyeOff, ArrowLeft } from "lucide-react";
+import { Eye, EyeOff, ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
+import { Link } from "react-router-dom";
 import {
   Form,
   FormControl,
@@ -17,7 +17,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Link } from "react-router-dom";
 
 // Zod schema for form validation
 const formSchema = z
@@ -98,13 +97,22 @@ const SetPasswordPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white font-geist">
-      <div className="flex items-center p-4 ">
+      <div className="flex justify-between w-full p-4">
+        {/* Back to display-name */}
         <Button variant="ghost" size="sm" className="mr-4 p-2">
-          <Link to="/auth/login">
+          <Link to="/auth/register/display-name">
             <ArrowLeft size={24} className="text-gray-600" />
           </Link>
         </Button>
+
+        {/* Forward to dashboard (or next step) */}
+        <Button variant="ghost" size="sm" className="mr-4 p-2">
+          <Link to="/dashboard">
+            <ArrowRight size={24} className="text-gray-600" />
+          </Link>
+        </Button>
       </div>
+
       <div className="bg-white p-6 sm:p-8 max-w-md mx-auto">
         <h1 className="text-2xl font-semibold mb-8 text-gray-900">
           Set up your password
