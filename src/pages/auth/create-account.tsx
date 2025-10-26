@@ -60,7 +60,7 @@ export default function CreateAccountPage() {
               Create an account
             </h2>
             <p className="text-gray-600 text-sm">
-              Sign up with email and pho number
+              Sign up with email and phone number
             </p>
           </div>
 

@@ -34,7 +34,7 @@ export default function DisplayNamePage() {
     <div className="font-geist flex flex-col px-2 sm:px-4 gap-6 py-5">
       <div className="flex justify-between w-full">
         <Button variant="ghost" size="sm" className="mr-4 p-2">
-          <Link to="/auth/register/confirm">
+          <Link to="/auth/confirm">
             <ArrowLeft size={24} className="text-gray-600" />
           </Link>
         </Button>
