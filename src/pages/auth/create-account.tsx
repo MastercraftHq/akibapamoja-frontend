@@ -42,54 +42,38 @@ export default function CreateAccountPage() {
   };
 
   return (
-    <div className="w-full">
-      <div className="flex items-center justify-center">
-        <div className="flex flex-col justify-center p-3 gap-5 w-full max-w-md">
-          {/* Navigation */}
-          <div className="flex justify-between w-full">
-            <Button variant="ghost" size="sm" className="mr-4 p-2">
-              <Link to="/">
-                <ArrowLeft size={24} className="text-gray-600" />
-              </Link>
-            </Button>
-          </div>
-
-          {/* Header */}
-          <div className="flex flex-col gap-5 mb-2">
-            <h2 className="font-semibold text-2xl font-geist">
-              Create an account
-            </h2>
-            <p className="text-gray-600 text-sm">
-              Sign up with email and phone number
-            </p>
-          </div>
-
-          {/* Tabs */}
-
-          <div className="space-y-4">
-            <div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email *"
-                value={formData.email}
-                onChange={handleChange}
-                className="border p-3 rounded w-full text-sm"
-                required
-              />
-            </div>
-
-            <div>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Enter phone number *"
-                value={formData.phone}
-                onChange={handleChange}
-                className="border p-3 rounded w-full text-sm"
-                required
-              />
-            </div>
+    <div className=" w-full max-w-md p-3">
+      <div className="flex items-center justify-center ">
+        <div className="flex flex-col justify-center border p-3 gap-3">
+          <h2 className="font-medium text-xl font-geist">Create an account</h2>
+          <p>Register your account using either your phone number or email</p>
+          <div className="flex gap-6 w-full">
+            <Tabs defaultValue="Phone" className="w-[400px]">
+              <TabsList className="w-full">
+                <TabsTrigger value="Phone">Phone</TabsTrigger>
+                <TabsTrigger value="Email">Email</TabsTrigger>
+              </TabsList>
+              <TabsContent value="Phone">
+                {" "}
+                <input
+                  type="number"
+                  name="phonenumber"
+                  id=""
+                  placeholder="Enter phone number"
+                  className="border p-2 rounded w-full text-sm"
+                />
+              </TabsContent>
+              <TabsContent value="Email">
+                {" "}
+                <input
+                  type="Email"
+                  name="Email"
+                  id=""
+                  placeholder="Enter your email"
+                  className="border p-2 rounded w-full text-sm"
+                />
+              </TabsContent>
+            </Tabs>
           </div>
 
           {/* Next button */}
